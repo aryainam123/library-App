@@ -18,7 +18,9 @@ export default class TransactionScreen extends React.Component{
     getCameraPermissions=async()=>{
         const {status}=await Permissions.askAsync(Permissions.CAMERA);
         this.setState({
-            hasCameraPermissions:status==='granted'
+            hasCameraPermissions:status==='granted',
+            buttonState:'clicked',
+            scanned:false
         })
     }
 
